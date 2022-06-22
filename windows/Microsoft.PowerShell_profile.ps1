@@ -3,7 +3,7 @@
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\bruno.omp.json" | Invoke-Expression
 
 # Instalar o módulo terminal icons (https://www.powershellgallery.com/packages/Terminal-Icons/0.9.0)
-# Importar o módulo para o arquivo de profile
+# Install-Module -Name Terminal-Icons
 Import-Module -Name Terminal-Icons
 
 # Instalar o módulo PSReadLine
@@ -11,3 +11,18 @@ Import-Module -Name Terminal-Icons
 Set-PSReadLineOption -PredictionSource History
 #Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
+
+# Instalar o módulo z
+# Install-Module -Name z -Force
+Import-Module -Name z -Force
+
+# Instalar o módulo Fzf
+# Install-Module -Name PSFzf -Scope CurrentUser -Force
+# Import-Module PSFzf
+# Set-PsFzOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+
+# Utilities
+function which ($command) {
+	Get-Command -Name $command -ErrorAction SilentlyContinue |
+		Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
