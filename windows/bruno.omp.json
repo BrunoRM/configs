@@ -17,18 +17,19 @@
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0b0",
           "properties": {
+            "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1 ",
             "home_icon": "~",
-            "style": "folder"
+            "style": "full"
           },
           "style": "powerline",
-          "template": " \uf74a  {{ .Path }} ",
+          "template": " \uf74a {{ .Path }} ",
           "type": "path"
         },
         {
           "background": "#009df8",
           "foreground": "#fcfcfc",
-          "powerline_symbol": "\ue0b4",
+          "powerline_symbol": "\ue0b0",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#fbc904{{ end }}",
             "{{ if gt .Ahead 0 }}#32f800{{ end }}",
@@ -70,6 +71,9 @@
           "invert_powerline": true,
           "leading_diamond": "\ue0b2",
           "style": "diamond",
+          "properties": {
+            "time_format": "2006-01-02 15:04:05"
+          },
           "template": " {{ .CurrentDate | date .Format }} ",
           "trailing_diamond": "\ue0b4",
           "type": "time"
