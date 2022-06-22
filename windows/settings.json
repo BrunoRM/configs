@@ -13,18 +13,19 @@
         },
         "list": [
             {
-                "colorScheme": "One Half Dark",
+                "colorScheme": "Tango Dark",
                 "cursorHeight": 25,
                 "cursorShape": "vintage",
                 "elevate": true,
-                "experimental.retroTerminalEffect": false,
-                "font": {
-                    "face": "Hack Nerd Font"
+                "font": 
+                {
+                    "face": "Hack Nerd Font",
+                    "size": 11
                 },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
-                "opacity": 80,
+                "opacity": 40,
                 "source": "Windows.Terminal.PowershellCore",
                 "useAcrylic": true
             },

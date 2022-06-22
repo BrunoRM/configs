@@ -9,17 +9,19 @@ Import-Module -Name Terminal-Icons
 # Instalar o módulo PSReadLine
 # Install-Module -Name PSReadLine -RequiredVersion 2.2.2
 Set-PSReadLineOption -PredictionSource History
-#Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 
 # Instalar o módulo z
 # Install-Module -Name z -Force
 Import-Module -Name z -Force
 
-# Instalar o módulo Fzf
+# Instalar o fzf 
+# choco install fzf
+# Instalar o módulo PSFzf
 # Install-Module -Name PSFzf -Scope CurrentUser -Force
-# Import-Module PSFzf
-# Set-PsFzOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 # Utilities
 function which ($command) {
