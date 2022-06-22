@@ -28,7 +28,7 @@
                 "intenseTextStyle": "all",
                 "name": "PowerShell",
                 "opacity": 10,
-                "padding": "0",
+                "padding": "10",
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.PowershellCore",
                 "useAcrylic": true
