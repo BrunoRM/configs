@@ -30,10 +30,9 @@
           "foreground": "#fcfcfc",
           "powerline_symbol": "\ue0b4",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#009df8{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#009df8{{ end }}",
-            "{{ if gt .Ahead 0 }}#009df8{{ end }}",
-            "{{ if gt .Behind 0 }}#009df8{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#fbc904{{ end }}",
+            "{{ if gt .Ahead 0 }}#32f800{{ end }}",
+            "{{ if gt .Behind 0 }}#9a0606{{ end }}"
           ],
           "properties": {
             "branch_icon": "\ue725 ",
@@ -90,7 +89,9 @@
         },
         {
           "foreground": "#e0f8ff",
-          "foreground_templates": ["{{ if gt .Code 0 }}#ef5350{{ end }}"],
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ef5350{{ end }}"
+          ],
           "properties": {
             "always_enabled": true
           },
