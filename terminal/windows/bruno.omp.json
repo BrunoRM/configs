@@ -95,7 +95,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#21c7c7",
+          "foreground": "#1454dd",
           "style": "plain",
           "template": "\u2570\u2500",
           "type": "text"
@@ -109,7 +109,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": "\ue285\ufb00 ",
+          "template": "\ue285",
           "type": "exit"
         }
       ],
