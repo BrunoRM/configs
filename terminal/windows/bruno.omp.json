@@ -19,11 +19,11 @@
           "properties": {
             "folder_icon": "\uf115",
             "folder_separator_icon": " \ue0b1 ",
-            "home_icon": "~",
-            "style": "full"
+            "home_icon": "\uf7db",
+            "style": "agnoster"
           },
           "style": "powerline",
-          "template": " \uf74a {{ .Path }} ",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
@@ -50,32 +50,41 @@
     {
       "segments": [
         {
-          "background": "#516BEB",
-          "foreground": "#ffffff",
+          "type": "os",
           "leading_diamond": "\ue0b2",
           "style": "diamond",
+          "foreground": "#26C6DA",
+          "background": "#546E7A",
+          "template": " {{.Icon}} "
+        },
+        {
+          "background": "#516BEB",
+          "foreground": "#ffffff",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b2",
+          "invert_powerline": true,
           "template": "\uf85a CPU: {{ round .PhysicalPercentUsed .Precision }}% | ",
           "type": "sysinfo"
         },
         {
           "background": "#516BEB",
           "foreground": "#ffffff",
-          "style": "diamond",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b2",
           "template": "MEM: {{ (div ((sub .PhysicalTotalMemory .PhysicalFreeMemory)|float64) 1000000000.0) }}/{{ (div .PhysicalTotalMemory 1000000000.0) }}GB \uf85a ",
-          "trailing_diamond": "<transparent,#516BEB>\ue0b2</>",
           "type": "sysinfo"
         },
         {
           "background": "#db0707",
           "foreground": "#f8f6f6",
           "invert_powerline": true,
-          "leading_diamond": "\ue0b2",
           "style": "diamond",
+          "trailing_diamond": "\ue0b4",
+          "powerline_symbol": "\ue0b2",
           "properties": {
             "time_format": "2006-01-02 15:04:05"
           },
           "template": " {{ .CurrentDate | date .Format }} ",
-          "trailing_diamond": "\ue0b4",
           "type": "time"
         }
       ],
