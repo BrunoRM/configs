@@ -27,11 +27,11 @@
           "type": "path"
         },
         {
-          "background": "#009df8",
+          "background": "#1fc419",
           "foreground": "#fcfcfc",
           "powerline_symbol": "\ue0b0",
           "background_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#fbc904{{ end }}",
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}#be4c00{{ end }}",
             "{{ if gt .Ahead 0 }}#32f800{{ end }}",
             "{{ if gt .Behind 0 }}#9a0606{{ end }}"
           ],
