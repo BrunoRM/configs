@@ -27,7 +27,7 @@
                 "hidden": false,
                 "intenseTextStyle": "all",
                 "name": "PowerShell",
-                "opacity": 10,
+                "opacity": 55,
                 "padding": "10",
                 "scrollbarState": "hidden",
                 "source": "Windows.Terminal.PowershellCore",
