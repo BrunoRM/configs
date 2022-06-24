@@ -23,6 +23,10 @@ Import-Module -Name z -Force
 Import-Module PSFzf
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+f' -PSReadlineChordReverseHistory 'Ctrl+r'
 
+# Instalar o posh-git (Auto complete para comandos do git)
+# Install-Module posh-git -Scope CurrentUser -Force
+Import-Module posh-git
+
 # Utilities
 function which ($command) {
 	Get-Command -Name $command -ErrorAction SilentlyContinue |
