@@ -1,0 +1,6 @@
+Para as nerd fonts funcionarem corretamente no terminal do VS Code, faça o seguinte:
+    1. Pressione Ctrl + Shift + P;
+    2. Procure pela opção "Preferences: Open Settings (JSON)";
+    3. Adicionar a seguinte propriedade no JSON de configurações:
+        "terminal.integrated.fontFamily": "sua_nerd_font" ("terminal.integrated.fontFamily": "Hack Nerd Font")
+    4. Pronto! O terminal do VS Code irá exibir as fontes e ícones do oh-my-posh corretamente.
