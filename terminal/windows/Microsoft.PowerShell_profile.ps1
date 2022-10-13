@@ -1,5 +1,8 @@
 # Executar o comando echo $profile e verificar qual o caminho que será retornado;
 # Pode ser que a pasta PowerShell não existe no caminho retornado. Se for o caso, crie-a;
+
+# Verificar qual a pasta de temas do oh-my-posh: echo $env:POSH_THEMES_PATH
+# Copiar o arquivo de config do oh-my-posh para esta pasta
 oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\bruno.omp.json" | Invoke-Expression
 
 # Instalar o módulo terminal icons (https://www.powershellgallery.com/packages/Terminal-Icons/0.9.0)
