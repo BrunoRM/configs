@@ -1,0 +1,60 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+        {
+            "alignment": "left",
+            "segments": [
+                {
+                    "foreground": "#fc9700",
+                    "style": "plain",
+                    "template": "\uf508 {{ .UserName }} on",
+                    "type": "session"
+                },
+                {
+                    "foreground": "#00c3ff",
+                    "properties": {
+                        "folder_separator_icon": "/",
+                        "style": "full"
+                    },
+                    "style": "plain",
+                    "template": " \uf07b {{ .Path }} ",
+                    "type": "path"
+                },
+                {
+                    "foreground": "#ff94df",
+                    "powerline_symbol": "\ue0b0",
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "fetch_stash_count": true,
+                        "fetch_upstream_icon": true,
+                        "fetch_status": true
+                    },
+                    "style": "plain",
+                    "template": "<#ff94df>on</> {{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }} ",
+                    "type": "git"
+                }
+            ],
+            "type": "prompt"
+        },
+        {
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "foreground": "#b6d6f2",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}red{{ end }}"
+                    ],
+                    "properties": {
+                        "always_enabled": true
+                    },
+                    "style": "powerline",
+                    "template": "\u276f ",
+                    "type": "exit"
+                }
+            ],
+            "type": "prompt"
+        }
+    ],
+    "version": 2
+}
