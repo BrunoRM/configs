@@ -1,0 +1,3 @@
+Adicionar o arquivo Directory.Packages.props na pasta onde a solution está. Este arquivo configura a versão do StyleCop e do SonarLint para todos os projetos da solution.
+
+Adicionar o arquivo .editorconfig na pasta onde a solution está. Este arquivo contém as regras de lint.

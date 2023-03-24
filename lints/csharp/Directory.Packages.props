@@ -1,0 +1,6 @@
+<Project>
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+    <!--<PackageReference Include="SonarAnalyzer.CSharp" Version="8.55.0.65544" />-->
+  </ItemGroup>
+</Project>
