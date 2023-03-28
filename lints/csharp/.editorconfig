@@ -582,7 +582,7 @@ csharp_style_var_for_built_in_types = false:silent
 csharp_style_var_when_type_is_apparent = false:silent
 csharp_style_var_elsewhere = false:silent
 
-# ASPNET Analyzers
+# AspNetCore Analyzers
 dotnet_diagnostic.ASP001.severity = error
 dotnet_diagnostic.ASP002.severity = error
 dotnet_diagnostic.ASP003.severity = error
@@ -596,3 +596,22 @@ dotnet_diagnostic.ASP010.severity = error
 dotnet_diagnostic.ASP011.severity = error
 dotnet_diagnostic.ASP012.severity = error
 dotnet_diagnostic.ASP010.severity = silent
+dotnet_diagnostic.ASP0000.severity = error
+
+# Microsoft.VisualStudio.Threading.Analyzers
+dotnet_diagnostic.VSTHRD100.severity = error
+dotnet_diagnostic.VSTHRD103.severity = error
+dotnet_diagnostic.VSTHRD110.severity = error
+dotnet_diagnostic.VSTHRD114.severity = error
+dotnet_diagnostic.VSTHRD200.severity = error
+
+# xunit.analyzers
+dotnet_diagnostic.xUnit1025.severity = error
+dotnet_diagnostic.xUnit1026.severity = error
+dotnet_diagnostic.xUnit1014.severity = error
+dotnet_diagnostic.xUnit1013.severity = error
+dotnet_diagnostic.xUnit1012.severity = error
+dotnet_diagnostic.xUnit1008.severity = error
+dotnet_diagnostic.xUnit1006.severity = error
+dotnet_diagnostic.xUnit1005.severity = error
+dotnet_diagnostic.xUnit1004.severity = warning
