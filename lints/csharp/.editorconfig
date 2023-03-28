@@ -65,6 +65,41 @@ dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 dotnet_style_prefer_compound_assignment = true:suggestion
 dotnet_style_prefer_simplified_interpolation = true:suggestion
 dotnet_style_namespace_match_folder = true:suggestion
+dotnet_style_readonly_field = true:error
+dotnet_style_predefined_type_for_locals_parameters_members = true:silent
+dotnet_style_predefined_type_for_member_access = true:silent
+dotnet_style_require_accessibility_modifiers = always:error
+dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
+dotnet_style_allow_multiple_blank_lines_experimental = false:error
+dotnet_code_quality_unused_parameters = all:error
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:error
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:error
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:error
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:error
+dotnet_style_qualification_for_property = false:silent
+dotnet_style_qualification_for_field = false:silent
+dotnet_style_qualification_for_method = false:silent
+dotnet_style_qualification_for_event = false:silent
+
+[*.cs]
+csharp_indent_labels = one_less_than_current
+csharp_using_directive_placement = outside_namespace:error
+csharp_prefer_simple_using_statement = true:error
+csharp_prefer_braces = true:error
+csharp_style_namespace_declarations = file_scoped:error
+csharp_style_prefer_method_group_conversion = true:silent
+csharp_style_prefer_top_level_statements = true:silent
+csharp_style_expression_bodied_methods = true:error
+csharp_style_expression_bodied_constructors = false:error
+csharp_style_expression_bodied_operators = true:error
+csharp_style_expression_bodied_properties = true:error
+csharp_style_expression_bodied_indexers = true:error
+csharp_style_expression_bodied_accessors = true:error
+csharp_style_expression_bodied_lambdas = true:error
+csharp_style_expression_bodied_local_functions = false:error
+csharp_style_throw_expression = true:suggestion
+
+# NetAnalyzers
 dotnet_diagnostic.CA1707.severity = error
 dotnet_diagnostic.CA1501.severity = error
 dotnet_diagnostic.CA1502.severity = error
@@ -90,21 +125,6 @@ dotnet_diagnostic.CA2250.severity = error
 dotnet_diagnostic.CA1727.severity = error
 dotnet_diagnostic.CA1725.severity = error
 dotnet_diagnostic.CA1724.severity = error
-dotnet_style_readonly_field = true:error
-dotnet_style_predefined_type_for_locals_parameters_members = true:silent
-dotnet_style_predefined_type_for_member_access = true:silent
-dotnet_style_require_accessibility_modifiers = always:error
-dotnet_style_allow_statement_immediately_after_block_experimental = true:silent
-dotnet_style_allow_multiple_blank_lines_experimental = false:error
-dotnet_code_quality_unused_parameters = all:error
-dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:error
-dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:error
-dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:error
-dotnet_style_parentheses_in_other_operators = never_if_unnecessary:error
-dotnet_style_qualification_for_property = false:silent
-dotnet_style_qualification_for_field = false:silent
-dotnet_style_qualification_for_method = false:silent
-dotnet_style_qualification_for_event = false:silent
 dotnet_diagnostic.CA1069.severity = error
 dotnet_diagnostic.CA2007.severity = silent
 dotnet_diagnostic.CA2012.severity = error
@@ -144,24 +164,18 @@ dotnet_diagnostic.CA1056.severity = error
 dotnet_diagnostic.CA1061.severity = error
 dotnet_diagnostic.CA1064.severity = error
 dotnet_diagnostic.CA1065.severity = error
-
-[*.cs]
-csharp_indent_labels = one_less_than_current
-csharp_using_directive_placement = outside_namespace:error
-csharp_prefer_simple_using_statement = true:error
-csharp_prefer_braces = true:error
-csharp_style_namespace_declarations = file_scoped:error
-csharp_style_prefer_method_group_conversion = true:silent
-csharp_style_prefer_top_level_statements = true:silent
-csharp_style_expression_bodied_methods = true:error
-csharp_style_expression_bodied_constructors = false:error
-csharp_style_expression_bodied_operators = true:error
-csharp_style_expression_bodied_properties = true:error
-csharp_style_expression_bodied_indexers = true:error
-csharp_style_expression_bodied_accessors = true:error
-csharp_style_expression_bodied_lambdas = true:error
-csharp_style_expression_bodied_local_functions = false:error
-csharp_style_throw_expression = true:suggestion
+dotnet_diagnostic.CA1805.severity = error
+dotnet_diagnostic.CA2016.severity = error
+dotnet_diagnostic.CA2234.severity = error
+dotnet_diagnostic.CA2244.severity = error
+dotnet_diagnostic.CA2246.severity = error
+dotnet_diagnostic.CA1820.severity = error
+dotnet_diagnostic.CA1841.severity = error
+dotnet_diagnostic.CA1825.severity = error
+dotnet_diagnostic.CA1812.severity = error
+dotnet_diagnostic.CA1802.severity = error
+dotnet_diagnostic.CA1047.severity = error
+#
 
 # Stylecop
 #   Layout rules
@@ -538,8 +552,6 @@ dotnet_diagnostic.S2931.severity = error
 dotnet_diagnostic.S3464.severity = error
 #
 
-dotnet_diagnostic.CA1805.severity = error
-dotnet_diagnostic.CA2016.severity = error
 csharp_style_prefer_null_check_over_type_check = true:suggestion
 csharp_style_prefer_local_over_anonymous_function = true:suggestion
 csharp_prefer_simple_default_expression = true:suggestion
@@ -569,14 +581,18 @@ csharp_style_prefer_extended_property_pattern = true:suggestion
 csharp_style_var_for_built_in_types = false:silent
 csharp_style_var_when_type_is_apparent = false:silent
 csharp_style_var_elsewhere = false:silent
-dotnet_diagnostic.CA2234.severity = error
-dotnet_diagnostic.CA2244.severity = error
-dotnet_diagnostic.CA2246.severity = error
-dotnet_diagnostic.CA1820.severity = error
-dotnet_diagnostic.CA1841.severity = error
-dotnet_diagnostic.CA1825.severity = error
-dotnet_diagnostic.CA1812.severity = error
-dotnet_diagnostic.CA1802.severity = error
-dotnet_diagnostic.ASP0000.severity = error
-[*.vb]
-dotnet_diagnostic.CA1047.severity = error
+
+# ASPNET Analyzers
+dotnet_diagnostic.ASP001.severity = error
+dotnet_diagnostic.ASP002.severity = error
+dotnet_diagnostic.ASP003.severity = error
+dotnet_diagnostic.ASP004.severity = error
+dotnet_diagnostic.ASP005.severity = error
+dotnet_diagnostic.ASP006.severity = error
+dotnet_diagnostic.ASP007.severity = error
+dotnet_diagnostic.ASP008.severity = error
+dotnet_diagnostic.ASP009.severity = error
+dotnet_diagnostic.ASP010.severity = error
+dotnet_diagnostic.ASP011.severity = error
+dotnet_diagnostic.ASP012.severity = error
+dotnet_diagnostic.ASP010.severity = silent
