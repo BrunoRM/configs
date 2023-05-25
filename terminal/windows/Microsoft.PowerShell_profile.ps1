@@ -34,3 +34,20 @@ function which ($command) {
 	Get-Command -Name $command -ErrorAction SilentlyContinue |
 		Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
 }
+
+function Clear-LocalBranches {
+	git fetch --prune
+	git checkout master
+	$localBranches = git branch --format="%(refname:short)"
+	$remoteBranches = git branch -r --format="%(refname:short)"
+	
+	foreach($branch in $localBranches){
+		$localBranchWithOriginPrefix = "origin/$branch"
+
+		if (-not($remoteBranches -contains $localBranchWithOriginPrefix)) {
+			git branch -D $branch
+		}
+	}
+	Write-Host "Local branches not in remote have been removed."
+}
+Set-Alias -Name clear-local-branches -Value Clear-LocalBranches
