@@ -135,31 +135,23 @@ csharp_style_prefer_readonly_struct_member = true:suggestion
 
 # NetAnalyzers
     # Design rules
-    dotnet_diagnostic.CA1045.severity = error
     dotnet_diagnostic.CA1050.severity = error
     dotnet_diagnostic.CA1051.severity = error
-    dotnet_diagnostic.CA1064.severity = error
     dotnet_diagnostic.CA1068.severity = error
     dotnet_diagnostic.CA1069.severity = error
 
     # Maintainability rules
-    dotnet_diagnostic.CA1501.severity = error
-    dotnet_diagnostic.CA1502.severity = error
-    dotnet_diagnostic.CA1505.severity = error
-    dotnet_diagnostic.CA1506.severity = error
     dotnet_diagnostic.CA1507.severity = error
     dotnet_diagnostic.CA1508.severity = error
 
     # Naming rules
-    dotnet_diagnostic.CA1707.severity = error
-    dotnet_diagnostic.CA1708.severity = error
     dotnet_diagnostic.CA1710.severity = error
     dotnet_diagnostic.CA1715.severity = error
     dotnet_diagnostic.CA1727.severity = error
 
     # Performance rules
     dotnet_diagnostic.CA1806.severity = error
-    dotnet_diagnostic.CA1812.severity = error
+    dotnet_diagnostic.CA1812.severity = none
     dotnet_diagnostic.CA1823.severity = error
     dotnet_diagnostic.CA1836.severity = error
     dotnet_diagnostic.CA1849.severity = error
