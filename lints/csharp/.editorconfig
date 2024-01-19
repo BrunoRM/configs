@@ -364,13 +364,14 @@ dotnet_diagnostic.VSTHRD200.severity = error
 #
 
 # xunit.analyzers
+dotnet_diagnostic.xUnit1004.severity = warning
+dotnet_diagnostic.xUnit1005.severity = error
+dotnet_diagnostic.xUnit1006.severity = error
+dotnet_diagnostic.xUnit1008.severity = error
+dotnet_diagnostic.xUnit1012.severity = error
+dotnet_diagnostic.xUnit1013.severity = error
+dotnet_diagnostic.xUnit1014.severity = error
+dotnet_diagnostic.xUnit1021.severity = error
 dotnet_diagnostic.xUnit1025.severity = error
 dotnet_diagnostic.xUnit1026.severity = error
-dotnet_diagnostic.xUnit1014.severity = error
-dotnet_diagnostic.xUnit1013.severity = error
-dotnet_diagnostic.xUnit1012.severity = error
-dotnet_diagnostic.xUnit1008.severity = error
-dotnet_diagnostic.xUnit1006.severity = error
-dotnet_diagnostic.xUnit1005.severity = error
-dotnet_diagnostic.xUnit1004.severity = warning
 #
