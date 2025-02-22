@@ -1,0 +1,83 @@
+name: "dev-local-services"
+services:
+  # postgresql
+  postgres:
+    image: postgres:alpine
+    command: postgres -c 'max_connections=2000'
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    restart: always
+
+  # postgresql 9.6
+  postgres-9_6:
+    image: postgres:9.6-alpine
+    command: postgres -c 'max_connections=2000'
+    ports:
+      - 5434:5432
+    volumes:
+      - postgres-9_6-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: postgres
+    restart: always
+
+  # azure storage
+  azure-storage:
+    image: mcr.microsoft.com/azure-storage/azurite
+    command: azurite --skipApiVersionCheck --blobHost 0.0.0.0
+    ports:
+      - 10000:10000
+    volumes:
+      - azure-storage-data:/data
+    restart: always
+
+  # azure service bus emulator
+  azure-service-bus-emulator:
+    container_name: "azure-service-bus-emulator"
+    image: mcr.microsoft.com/azure-messaging/servicebus-emulator:latest
+    volumes:
+      - ".\\service-bus-config.json:/ServiceBus_Emulator/ConfigFiles/Config.json"
+    ports:
+      - 5672:5672
+    environment:
+      SQL_SERVER: azure-service-bus-emulator-sqledge
+      MSSQL_SA_PASSWORD: myStrong(!)Password
+      ACCEPT_EULA: "Y"
+    depends_on:
+      - azure-service-bus-emulator-sqledge
+    restart: always
+
+  azure-service-bus-emulator-sqledge:
+    container_name: "azure-service-bus-emulator-sqledge"
+    image: "mcr.microsoft.com/azure-sql-edge:latest"
+    ports:
+      - 1434:1433
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: myStrong(!)Password
+    restart: always
+
+  # sql server 2022
+  sql-server-2022:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+      - 1433:1433
+    volumes:
+      - sql-server-2022-data:/var/opt/mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_SA_PASSWORD: myStrong(!)Password
+    restart: always
+
+volumes:
+  postgres-data:
+  postgres-9_6-data:
+  azure-storage-data:
+  sql-server-2022-data:
