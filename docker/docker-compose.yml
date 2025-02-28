@@ -63,6 +63,20 @@ services:
   #     MSSQL_SA_PASSWORD: myStrong(!)Password
   #   restart: always
 
+  # jaeger:
+  #   image: jaegertracing/all-in-one:1.58.0
+  #   ports:
+  #     - 16686:16686
+  #     - 4317:4317
+  #   restart: always
+
+  aspire-dashboard:
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.0
+    ports:
+      - 18888:18888
+      - 4317:18889
+    restart: always
+
 volumes:
   postgres-15_12-data:
   sql-server-2022-data:
